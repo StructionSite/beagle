@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import coil.ImageLoader
-import coil.fetch.VideoFrameFileFetcher
+import coil.decode.VideoFrameDecoder
 import com.pandulapeter.beagle.BeagleCore
 import com.pandulapeter.beagle.common.configuration.Appearance
 import com.pandulapeter.beagle.common.configuration.Behavior
@@ -118,8 +118,8 @@ class BeagleImplementation(val uiManager: UiManagerContract) : BeagleContract {
         behavior.logBehavior.loggers.forEach { it.register(::log, ::clearLogEntries) }
         behavior.networkLogBehavior.networkLoggers.forEach { it.register(::logNetworkEvent, ::clearNetworkLogEntries) }
         videoThumbnailLoader = ImageLoader.Builder(application)
-            .componentRegistry {
-                add(VideoFrameFileFetcher(application))
+            .components {
+                add(VideoFrameDecoder.Factory())
             }
             .build()
     }

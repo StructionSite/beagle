@@ -16,14 +16,14 @@ buildscript {
         moshiVersion = "1.12.0"
         okHttpVersion = "4.9.1"
         ktorVersion = "1.6.5"
-        coilVersion = "1.4.0"
+        coilVersion = "2.0.0-alpha06"
     }
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "com.android.tools.build:gradle:7.0.4"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
     }
 }
