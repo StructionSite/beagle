@@ -85,7 +85,7 @@ dependencies {
 The latest version is:
 
 
-[![](https://jitpack.io/v/pandulapeter/beagle.svg)](https://jitpack.io/#pandulapeter/beagle)
+[![](https://jitpack.io/v/pandulapeter/beagle.svg)](https://jitpack.io/#StructionSite/beagle)
 
 **Note**: In case of the drawer UI, if you have overwritten the `Activity`'s `onBackPressed()` method, you might notice that the default back navigation handling does not always work as expected. To fix this, in every `Activity`'s `onBackPressed()` you should check that `Beagle.hide()` returns false before doing any other checks or calling the super implementation.
 
